@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="HADS18-FEDE" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\fedeb\\OneDrive\\Desktop\\UPV\\3-2AÑO\\HADS\\lab1\\webprueba\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\fedeb\\OneDrive\\Desktop\\UPV\\3-2AÑO\\HADS\\lab1\\webprueba\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="AmigosConnectionString-Web.config Connection String" description="AmigosConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." value="Data Source=hads.database.windows.net;Initial Catalog=Amigos;User ID=hads;Password=JAVadillo-2018" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\fedeb\\OneDrive\\Desktop\\UPV\\3-2AÑO\\HADS\\lab1\\webprueba\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AmigosConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

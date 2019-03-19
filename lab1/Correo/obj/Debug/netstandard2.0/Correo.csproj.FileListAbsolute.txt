@@ -1,0 +1,17 @@
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\bin\Debug\netstandard2.0\Correo.deps.json
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\bin\Debug\netstandard2.0\Correo.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\bin\Debug\netstandard2.0\Correo.pdb
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.csprojAssemblyReference.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.csproj.CoreCompileInputs.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.AssemblyInfoInputs.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.AssemblyInfo.cs
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\Correo\obj\Debug\netstandard2.0\Correo.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\bin\Debug\netstandard2.0\Correo.deps.json
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\bin\Debug\netstandard2.0\Correo.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\bin\Debug\netstandard2.0\Correo.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\obj\Debug\netstandard2.0\Correo.csproj.CoreCompileInputs.cache
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\obj\Debug\netstandard2.0\Correo.AssemblyInfoInputs.cache
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\obj\Debug\netstandard2.0\Correo.AssemblyInfo.cs
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\obj\Debug\netstandard2.0\Correo.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Correo\obj\Debug\netstandard2.0\Correo.pdb

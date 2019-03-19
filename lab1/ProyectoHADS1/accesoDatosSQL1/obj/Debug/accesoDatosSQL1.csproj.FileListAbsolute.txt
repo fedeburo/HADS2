@@ -1,0 +1,6 @@
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\bin\Debug\accesoDatosSQL1.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\bin\Debug\accesoDatosSQL1.pdb
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Debug\accesoDatosSQL1.csproj.CoreCompileInputs.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Debug\accesoDatosSQL1.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Debug\accesoDatosSQL1.pdb
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Debug\accesoDatosSQL1.csprojAssemblyReference.cache

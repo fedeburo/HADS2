@@ -1,0 +1,12 @@
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\bin\Release\accesoDatosSQL1.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\bin\Release\accesoDatosSQL1.pdb
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.csprojAssemblyReference.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.csproj.CoreCompileInputs.cache
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.dll
+C:\Users\fedeburo\source\repos\ProyectoHADS1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\bin\Release\accesoDatosSQL1.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\bin\Release\accesoDatosSQL1.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.csprojAssemblyReference.cache
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.csproj.CoreCompileInputs.cache
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\accesoDatosSQL1\obj\Release\accesoDatosSQL1.pdb

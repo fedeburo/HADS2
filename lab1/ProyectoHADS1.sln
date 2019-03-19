@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Correo", "Correo\Correo.csproj", "{F841C0EE-FEC4-49ED-A954-F5F1FC5C4F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accesoDatosSQL1", "accesoDatosSQL1\accesoDatosSQL1.csproj", "{132C9013-78FA-435F-B3C3-EEE575E16D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webprueba", "webprueba\webprueba.csproj", "{533DE758-FCC8-4411-9057-B7DBDB35EE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F841C0EE-FEC4-49ED-A954-F5F1FC5C4F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F841C0EE-FEC4-49ED-A954-F5F1FC5C4F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F841C0EE-FEC4-49ED-A954-F5F1FC5C4F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F841C0EE-FEC4-49ED-A954-F5F1FC5C4F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132C9013-78FA-435F-B3C3-EEE575E16D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132C9013-78FA-435F-B3C3-EEE575E16D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132C9013-78FA-435F-B3C3-EEE575E16D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132C9013-78FA-435F-B3C3-EEE575E16D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8AD6B08-E3A0-4D51-A1C4-A50B20C3C60F}
+	EndGlobalSection
+EndGlobal
