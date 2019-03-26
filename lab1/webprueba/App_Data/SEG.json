@@ -1,0 +1,51 @@
+[
+  {
+    "Codigo": "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "Descripcion": "sdsd",
+    "HEstimadas": 4,
+    "Explotacion": true,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "no se muestra 1",
+    "Descripcion": "sdsd",
+    "HEstimadas": 4,
+    "Explotacion": false,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "SEG08-Test12",
+    "Descripcion": "Test 12 de la asignatura",
+    "HEstimadas": 3,
+    "Explotacion": false,
+    "TipoTarea": "Examen"
+  },
+  {
+    "Codigo": "SEG08-Trabajo20",
+    "Descripcion": "Tareas del trabajo 20 de la asignatura",
+    "HEstimadas": 10,
+    "Explotacion": false,
+    "TipoTarea": "Trabajo"
+  },
+  {
+    "Codigo": "SEG18-Lab1",
+    "Descripcion": "Tareas del trabajo 20 de la asignatura",
+    "HEstimadas": 10,
+    "Explotacion": false,
+    "TipoTarea": "Trabajo"
+  },
+  {
+    "Codigo": "SEG18-Test1",
+    "Descripcion": "Test 12 de la asignatura",
+    "HEstimadas": 3,
+    "Explotacion": false,
+    "TipoTarea": "Examen"
+  },
+  {
+    "Codigo": "SEG19",
+    "Descripcion": "prueba",
+    "HEstimadas": 10,
+    "Explotacion": true,
+    "TipoTarea": "Ejercicio"
+  }
+]

@@ -10,17 +10,19 @@
 
 
 .mybutton{
-      background-color: #008CBA; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
+        border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #008CBA; 
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+  margin: 4px 2px 4px 32px;
+            cursor: pointer;
+            border-radius: 8px;
 }
 
     </style>
@@ -28,11 +30,12 @@
 <body>
     <form id="form1" runat="server">
         <div style="height: 70px">
-                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="627px">
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCerrarSesion" runat="server" class="mybutton"  OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" BackColor="#008CBA"   />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="796px">
+                        &nbsp;
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Alumno/Alumno.aspx">Volver a inicio</asp:HyperLink>
+                        &nbsp;
                         <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="ALUMNOS-INSTANCIAR TAREA"></asp:Label>
+                        <asp:Button ID="btnCerrarSesion" runat="server" BackColor="#008CBA" class="mybutton" OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" Width="168px" />
                         <br />
                     </asp:Panel>
             <br />
@@ -79,7 +82,6 @@
             <br />
             <br />
         </div>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Alumno/Alumno.aspx">Volver a inicio</asp:HyperLink>
     </form>
 </body>
 </html>

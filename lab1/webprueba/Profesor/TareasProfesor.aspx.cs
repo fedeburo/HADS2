@@ -12,6 +12,7 @@ namespace webprueba.Profesor
         protected void Page_Load(object sender, EventArgs e)
         {
             string correo = Session["correo"].ToString();
+
         }
 
         protected void btnInsertarTarea_Click(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace webprueba.Profesor
         {
             Session.Abandon();
             Response.Redirect("~/Inicio.aspx");
+        }
+
+        protected void DropDownList1_DataBound(object sender, EventArgs e)
+        {
+            DropDownList1.SelectedValue = DropDownList1.Items[0].Value;
         }
     }
 }

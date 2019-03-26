@@ -10,17 +10,19 @@
 
 
 .mybutton{
-      background-color: #008CBA; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
+        border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #008CBA; 
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+  margin: 4px 2px 4px 35px;
+            cursor: pointer;
+            border-radius: 8px;
 }
 
     </style>
@@ -30,11 +32,12 @@
         <div style="height: 415px">
              <div style="height: 70px">
             <asp:Panel ID="Panel1" runat="server" Height="94px">
-                <asp:Panel ID="Panel4" runat="server" Height="81px" Width="627px">
+                <asp:Panel ID="Panel4" runat="server" Height="81px" Width="812px">
+                    &nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a Inicio</asp:HyperLink>
                     &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnCerrarSesion" runat="server" BackColor="#008CBA" class="mybutton" OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="PROFESOR-GESTION DE TAREAS"></asp:Label>
+                    <asp:Button ID="btnCerrarSesion" runat="server" BackColor="#008CBA" class="mybutton" OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" />
                     <br />
                     <br />
                     <br />
@@ -91,14 +94,14 @@
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Seleccionar la asignatura"></asp:Label>
                 <br />
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" Width="150px" AutoPostBack="true">
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" Width="150px" AutoPostBack="true" OnDataBound="DropDownList1_DataBound">
+                    
                 </asp:DropDownList>
                 <br />
                 <br />
                 <asp:Button ID="btnInsertarTarea" runat="server" Text="Insertar tarea" OnClick="btnInsertarTarea_Click" />
                 <br />
                 <br />
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a Inicio</asp:HyperLink>
             </asp:Panel>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>

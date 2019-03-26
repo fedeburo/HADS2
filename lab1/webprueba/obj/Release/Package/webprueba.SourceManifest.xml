@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
-</sitemanifest>

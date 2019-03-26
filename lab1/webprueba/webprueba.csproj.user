@@ -9,7 +9,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NameOfLastUsedPublishProfile>HADS18-FEDE - Web Deploy2</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>HADS18-FEDE - FTP2</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

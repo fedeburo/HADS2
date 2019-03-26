@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea codigo="ISO-Lab1">
+    <descripcion>prueba</descripcion>
+    <hestimadas>12</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="pruebaISO">
+    <descripcion>pureba</descripcion>
+    <hestimadas>5</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+</tareas>

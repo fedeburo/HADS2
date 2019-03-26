@@ -11,25 +11,34 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
   </PropertyGroup>
   <ItemGroup>
     <File Include="Alumno/Alumno.aspx">
-      <publishTime>03/19/2019 18:21:29</publishTime>
+      <publishTime>03/25/2019 17:02:03</publishTime>
     </File>
     <File Include="Alumno/InstanciarTarea.aspx">
-      <publishTime>03/19/2019 15:59:33</publishTime>
+      <publishTime>03/25/2019 17:02:49</publishTime>
     </File>
     <File Include="Alumno/TareasAlumno.aspx">
-      <publishTime>03/19/2019 15:59:03</publishTime>
+      <publishTime>03/25/2019 17:03:21</publishTime>
+    </File>
+    <File Include="App_Data/HAS.xml">
+      <publishTime>03/14/2018 15:57:28</publishTime>
+    </File>
+    <File Include="App_Data/SEG.xml">
+      <publishTime>03/26/2019 10:28:14</publishTime>
+    </File>
+    <File Include="App_Data/XSLTFile.xsl">
+      <publishTime>03/26/2019 09:42:05</publishTime>
     </File>
     <File Include="bin/accesoDatosSQL1.dll">
-      <publishTime>03/19/2019 18:28:35</publishTime>
+      <publishTime>03/26/2019 09:10:57</publishTime>
     </File>
     <File Include="bin/accesoDatosSQL1.pdb">
-      <publishTime>03/19/2019 18:28:35</publishTime>
+      <publishTime>03/26/2019 09:10:57</publishTime>
     </File>
     <File Include="bin/Correo.dll">
-      <publishTime>03/19/2019 18:28:36</publishTime>
+      <publishTime>03/26/2019 09:10:57</publishTime>
     </File>
     <File Include="bin/Correo.pdb">
-      <publishTime>03/19/2019 18:28:36</publishTime>
+      <publishTime>03/26/2019 09:10:57</publishTime>
     </File>
     <File Include="bin/Microsoft.Win32.Primitives.dll">
       <publishTime>02/19/2019 19:41:19</publishTime>
@@ -197,7 +206,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/19/2019 19:41:19</publishTime>
     </File>
     <File Include="bin/System.Net.Ping.dll">
-      <publishTime>02/19/2019 19:41:19</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Net.Primitives.dll">
       <publishTime>02/19/2019 19:41:19</publishTime>
@@ -350,10 +359,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/19/2019 19:41:19</publishTime>
     </File>
     <File Include="bin/webprueba.dll">
-      <publishTime>03/19/2019 19:17:42</publishTime>
+      <publishTime>03/26/2019 15:30:31</publishTime>
     </File>
     <File Include="bin/webprueba.pdb">
-      <publishTime>03/19/2019 19:17:42</publishTime>
+      <publishTime>03/26/2019 15:30:31</publishTime>
     </File>
     <File Include="CambiarPassword.aspx">
       <publishTime>02/25/2019 11:23:07</publishTime>
@@ -367,14 +376,26 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Logueado.aspx">
       <publishTime>02/25/2019 11:23:07</publishTime>
     </File>
+    <File Include="Profesor/ExportarTareas.aspx">
+      <publishTime>03/25/2019 16:56:50</publishTime>
+    </File>
+    <File Include="Profesor/ImportarTareasXMLDocument.aspx">
+      <publishTime>03/25/2019 16:58:09</publishTime>
+    </File>
     <File Include="Profesor/InsertarTarea.aspx">
-      <publishTime>03/19/2019 17:03:17</publishTime>
+      <publishTime>03/25/2019 16:58:50</publishTime>
+    </File>
+    <File Include="Profesor/Profesor.aspx">
+      <publishTime>03/25/2019 17:00:32</publishTime>
+    </File>
+    <File Include="Profesor/TareasProfesor.aspx">
+      <publishTime>03/26/2019 11:27:01</publishTime>
     </File>
     <File Include="Registro.aspx">
       <publishTime>02/25/2019 11:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/19/2019 19:17:49</publishTime>
+      <publishTime>03/26/2019 09:22:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

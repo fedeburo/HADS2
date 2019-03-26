@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea codigo="holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="no se muestra 1">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Test12">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Trabajo20">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Lab1">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Test1">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG19">
+    <descripcion>prueba</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+</tareas>

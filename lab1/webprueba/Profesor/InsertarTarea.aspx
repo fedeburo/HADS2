@@ -30,11 +30,13 @@
         <div style="height: 323px">
             <div style="height: 64px">
                 <asp:Panel ID="Panel1" runat="server" Height="82px" Width="645px">
-                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="627px">
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCerrarSesion" runat="server" class="mybutton"  OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" BackColor="#008CBA"   />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="823px">
+                        &nbsp;&nbsp;
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a inicio</asp:HyperLink>
+                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="PROFESOR-INSERTAR TAREA"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnCerrarSesion" runat="server" BackColor="#008CBA" class="mybutton" OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" />
                         <br />
                     </asp:Panel>
                 </asp:Panel>
@@ -89,8 +91,7 @@
             <asp:Label ID="lblInsertado" runat="server"></asp:Label>
         </p>
         <p>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/Profesor.aspx">Volver a inicio</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

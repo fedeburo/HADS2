@@ -1,0 +1,281 @@
+Importar tareas (versión XMLDocument)
+Instrucción utilizada para cargar el documento en el objeto XmlDocument
+
+xmlDoc.Load(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+
+Describir cómo se ha implementado la solución.
+
+        {
+            ac.conectar();
+            XmlDocument xmlDoc = new XmlDocument();
+            if(!File.Exists(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"))){
+                lblMensaje.Text = "No hay documentos xml para importar de esa asignatura";
+                btnImportar.Visible = false;
+            }
+            else
+            {
+                btnImportar.Visible = true;
+                try
+                {
+                    xmlDoc.Load(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+                    //Se genera el dataSet de tareas genericas
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TareasGenericas", ac.conexion);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataTable tareas = new DataTable();
+                    da.Fill(ds, "tareas");
+                    try
+                    {
+                        XmlNode root = xmlDoc.DocumentElement;
+                        XmlNodeList tarea = xmlDoc.GetElementsByTagName("tarea");
+                        for (int i = 0; i < tarea.Count; i++)
+                        {
+                            DataRow fila = ds.Tables[0].NewRow();
+                            fila[0] = tarea[i].Attributes["codigo"].Value;//o Value;
+                            fila[1] = tarea[i].ChildNodes[0].InnerText;
+                            fila[2] = DropDownList1.SelectedValue;
+                            fila[3] = tarea[i].ChildNodes[1].InnerText;
+                            fila[4] = tarea[i].ChildNodes[2].InnerText;
+                            fila[5] = tarea[i].ChildNodes[3].InnerText;
+                            ds.Tables[0].Rows.Add(fila);
+                            da.Update(ds.Tables[0]);
+                            ds.AcceptChanges();
+
+                        }
+
+
+                        lblMensaje.Text = "Las tareas han sido insertadas en la BD exitosamente";
+                    }
+me fijo que exista el archivo, luego cargo el xml, genero el dataset con su datadapter y comandbuilder, hago un fill a la datatable tareas, y luego voy navegando por el xml cargado para obtener sus datos. Por utlimo se hace un update y acceptchanges para actualizar la bd.
+
+
+Exportar tareas
+
+Instrucción usada para generar el fichero xml a partir del DataSet.
+
+ DataSet ds = Session["data"] as DataSet;
+                ds.Tables[0].Columns[0].ColumnMapping = MappingType.Attribute;
+                ds.Tables[0].Columns[0].ColumnName = "codigo";
+                ds.Tables[0].Columns[1].ColumnName = "descripcion";
+                ds.Tables[0].Columns[2].ColumnName = "hestimadas";
+
+                ds.WriteXml(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+
+Código utilizado para convertir el elemento <codigo> en atributo con ColumnMapping.
+
+                ds.Tables[0].Columns[0].ColumnMapping = MappingType.Attribute;
+
+Pegar el contenido de un fichero .xml con tareas exportadas (p.e. ISO.xml)
+
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea codigo="holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="no se muestra 1">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Test12">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Trabajo20">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Lab1">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Test1">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG19">
+    <descripcion>prueba</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+</tareas>
+
+--------------OPTATIVO-----------------
+Tarea 2: Exportar tareas añadiendo el atributo xmlns:has
+
+Código utilizado para añadir el atributo. Junto con una breve explicación de cómo se ha resuelto.
+
+ds.WriteXml(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+                XmlDocument xml = new XmlDocument();
+                xml.Load(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+                xml.DocumentElement.SetAttribute("xmlns:has", "http://ji.ehu.es/has");
+                xml.Save(Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".xml"));
+                lblMensaje.Text = "Las tareas han sido exportadas sactifactoriamente";
+primero se guarda el archivo.xml sin el atributo de namespace. luego se carga este archivo y se le instancia el atributo xmlns:has con su url correspondiente. Por ultimo se vuelve a guardar el archivo con el mismo nombre y se sobreescribe.
+
+
+Pegar el código xml del fichero generado para realizar la prueba del método.
+
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea codigo="holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="no se muestra 1">
+    <descripcion>sdsd</descripcion>
+    <hestimadas>4</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Test12">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG08-Trabajo20">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Lab1">
+    <descripcion>Tareas del trabajo 20 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG18-Test1">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </tarea>
+  <tarea codigo="SEG19">
+    <descripcion>prueba</descripcion>
+    <hestimadas>10</hestimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </tarea>
+</tareas>
+
+
+Tarea 4: Exportar en formato JSON
+
+Código utilizado con una breve descripción
+
+  try
+            {
+                string JSONresult;
+                DataSet ds = Session["data"] as DataSet;
+                JSONresult = JsonConvert.SerializeObject(ds.Tables[0], Newtonsoft.Json.Formatting.Indented);
+                System.IO.File.WriteAllText((Server.MapPath("../App_Data/" + DropDownList1.SelectedValue + ".json")), JSONresult);
+                lblMensaje.Text = "Las tareas han sido exportadas exitosamente en formato JSON";
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+
+Se tuvo que instalar un nugget de Newtonsoft.Json, y luego se serializa la datatable guardada en Session, en formato json y se indenta con el formatting.
+Por ultimo se guarda con el System.IO.File.WriteAllText
+
+
+
+
+Pegar el contenido del fichero json obtenido para una asignatura
+[
+  {
+    "Codigo": "GIS-Lab4",
+    "Descripcion": "ddfdfdf",
+    "HEstimadas": 6,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Lab10",
+    "Descripcion": "aaaa",
+    "HEstimadas": 10,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Lab12",
+    "Descripcion": "Laboratorio 12 de la asignatura",
+    "HEstimadas": 12,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Test5",
+    "Descripcion": "Test 5 de la asignatura",
+    "HEstimadas": 3,
+    "Explotacion": true,
+    "TipoTarea": "examen"
+  },
+  {
+    "Codigo": "HAS11-LAB4",
+    "Descripcion": "lalalalal",
+    "HEstimadas": 20,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "Lab4",
+    "Descripcion": "lelelelelelelel",
+    "HEstimadas": 12,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "no se muestra",
+    "Descripcion": "prueba no muestra",
+    "HEstimadas": 2,
+    "Explotacion": false,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "sdsd",
+    "Descripcion": "sdsd",
+    "HEstimadas": 95,
+    "Explotacion": false,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "tarea prueba",
+    "Descripcion": "prueba",
+    "HEstimadas": 6,
+    "Explotacion": true,
+    "TipoTarea": "Trabajo"
+  },
+  {
+    "Codigo": "tarea prueba1",
+    "Descripcion": "se muestra",
+    "HEstimadas": 25,
+    "Explotacion": true,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "Test1",
+    "Descripcion": "10 preguntas ....",
+    "HEstimadas": 1,
+    "Explotacion": true,
+    "TipoTarea": "Examen"
+  }
+]

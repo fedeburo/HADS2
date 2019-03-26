@@ -272,3 +272,6 @@ C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Debug\webpru
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Debug\webprueba.csproj.CopyComplete
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Debug\webprueba.dll
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Debug\webprueba.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.xml

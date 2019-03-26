@@ -10,27 +10,28 @@
 
 
 .mybutton{
-      background-color: #008CBA; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
+        border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #008CBA; 
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+  margin: 4px 2px 4px 43px;
+            cursor: pointer;
+            border-radius: 8px;
 }
 
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="627px">
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCerrarSesion" runat="server" class="mybutton"  OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" BackColor="#008CBA"   />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="ALUMNOS-GESTION DE TAREAS"></asp:Label>
+                    <asp:Panel ID="Panel4" runat="server" Height="81px" Width="922px">
+                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="ALUMNOS-GESTION DE TAREAS"></asp:Label>
+                        <asp:Button ID="btnCerrarSesion" runat="server" BackColor="#008CBA" class="mybutton" OnClick="btnCerrarSesion_Click" Text="Cerrar sesion" />
                         <br />
                     </asp:Panel>
         <asp:Label ID="lblSeleccionar" runat="server" Text="Seleccionar asignatura matriculada"></asp:Label>

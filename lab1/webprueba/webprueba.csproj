@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,10 +73,17 @@
     <Content Include="Alumno\Alumno.aspx" />
     <Content Include="Alumno\InstanciarTarea.aspx" />
     <Content Include="Alumno\TareasAlumno.aspx" />
+    <Content Include="App_Data\HAS.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SEG.xml" />
+    <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Logueado.aspx" />
+    <Content Include="Profesor\ExportarTareas.aspx" />
+    <Content Include="Profesor\ImportarTareasXMLDocument.aspx" />
     <Content Include="Profesor\InsertarTarea.aspx" />
     <Content Include="Profesor\Profesor.aspx" />
     <Content Include="Profesor\TareasProfesor.aspx" />
@@ -132,6 +142,20 @@
     <Compile Include="Logueado.aspx.designer.cs">
       <DependentUpon>Logueado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\ExportarTareas.aspx.cs">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\ExportarTareas.aspx.designer.cs">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\ImportarTareasXMLDocument.aspx.cs">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\ImportarTareasXMLDocument.aspx.designer.cs">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\InsertarTarea.aspx.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +187,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Data\tareas.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -189,6 +216,7 @@
       <Name>Correo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

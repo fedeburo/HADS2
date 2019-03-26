@@ -1,0 +1,79 @@
+[
+  {
+    "Codigo": "GIS-Lab4",
+    "Descripcion": "ddfdfdf",
+    "HEstimadas": 6,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Lab10",
+    "Descripcion": "aaaa",
+    "HEstimadas": 10,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Lab12",
+    "Descripcion": "Laboratorio 12 de la asignatura",
+    "HEstimadas": 12,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "HAS08-Test5",
+    "Descripcion": "Test 5 de la asignatura",
+    "HEstimadas": 3,
+    "Explotacion": true,
+    "TipoTarea": "examen"
+  },
+  {
+    "Codigo": "HAS11-LAB4",
+    "Descripcion": "lalalalal",
+    "HEstimadas": 20,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "Lab4",
+    "Descripcion": "lelelelelelelel",
+    "HEstimadas": 12,
+    "Explotacion": true,
+    "TipoTarea": "Laboratorio"
+  },
+  {
+    "Codigo": "no se muestra",
+    "Descripcion": "prueba no muestra",
+    "HEstimadas": 2,
+    "Explotacion": false,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "sdsd",
+    "Descripcion": "sdsd",
+    "HEstimadas": 95,
+    "Explotacion": false,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "tarea prueba",
+    "Descripcion": "prueba",
+    "HEstimadas": 6,
+    "Explotacion": true,
+    "TipoTarea": "Trabajo"
+  },
+  {
+    "Codigo": "tarea prueba1",
+    "Descripcion": "se muestra",
+    "HEstimadas": 25,
+    "Explotacion": true,
+    "TipoTarea": "Ejercicio"
+  },
+  {
+    "Codigo": "Test1",
+    "Descripcion": "10 preguntas ....",
+    "HEstimadas": 1,
+    "Explotacion": true,
+    "TipoTarea": "Examen"
+  }
+]
