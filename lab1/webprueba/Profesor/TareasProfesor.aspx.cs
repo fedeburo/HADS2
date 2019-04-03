@@ -23,6 +23,7 @@ namespace webprueba.Profesor
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Session.Abandon();
+            System.Web.Security.FormsAuthentication.SignOut();
             Response.Redirect("~/Inicio.aspx");
         }
 

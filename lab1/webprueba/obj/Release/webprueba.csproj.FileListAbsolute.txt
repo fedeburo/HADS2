@@ -275,3 +275,5 @@ C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\obj\Release\webp
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.dll
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.pdb
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Newtonsoft.Json.xml
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Sha256.dll
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\webprueba\bin\Sha256.pdb

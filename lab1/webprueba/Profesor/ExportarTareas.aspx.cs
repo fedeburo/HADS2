@@ -20,6 +20,7 @@ namespace webprueba.Profesor
         {
             Session.Abandon();
             Response.Redirect("~/Inicio.aspx");
+            System.Web.Security.FormsAuthentication.SignOut();
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.Security;
 using accesoDatosSQL;
+using Sha256;
 
 namespace webprueba
 {
@@ -24,15 +21,28 @@ namespace webprueba
             ac.conectar();
             if (CorreoyPassyConfirmExistente())
             {
+                
                 Session["correo"] = txtCorreo.Text;
                 Session["tipo"] = tipo;
-                if (tipo == "Profesor")
+                if (tipo == "Profesor" && txtCorreo.Text == "vadillo@ehu.es")
                 {
+                    FormsAuthentication.SetAuthCookie("Vadillo", false);
+                    this.Response.Redirect("/Profesor/Profesor.aspx");
+                }
+                if (tipo == "Profesor" && txtCorreo.Text != "vadillo@ehu.es")
+                {
+                    FormsAuthentication.SetAuthCookie("Profesor", false);
                     this.Response.Redirect("/Profesor/Profesor.aspx");
                 }
                 if (tipo == "Alumno")
                 {
+                    FormsAuthentication.SetAuthCookie("Alumno", false);
                     this.Response.Redirect("/Alumno/Alumno.aspx");
+                }
+                if (tipo == "Admin")
+                {
+                    FormsAuthentication.SetAuthCookie("Admin", false);
+                    this.Response.Redirect("/Admin/VerUsuarios.aspx");
                 }
                 this.lblErrorCorreo.Visible = false;
             }
@@ -41,18 +51,16 @@ namespace webprueba
                 this.lblErrorCorreo.Visible = true;
             }
             ac.cerrarConexion();
-
         }
 
         private bool CorreoyPassyConfirmExistente()
         {
             bool retorno = false;
-
             string select = "select * from Usuarios where email=@correo and confirmado=@confirm and pass=@contra";
             SqlCommand comando1 = new SqlCommand(select, ac.conexion);
             comando1.Parameters.AddWithValue("@correo", txtCorreo.Text);
             comando1.Parameters.AddWithValue("@confirm", 1);
-            comando1.Parameters.AddWithValue("@contra", txtPassword.Text);
+            comando1.Parameters.AddWithValue("@contra", EncriptarMD5.MD5Hash(txtPassword.Text));
 
             SqlDataReader dr = comando1.ExecuteReader();
             dr.Read();

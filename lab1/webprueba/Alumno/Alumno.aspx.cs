@@ -19,6 +19,7 @@ namespace webprueba.Alumno
         {
             Session.Abandon();
             Response.Redirect("~/Inicio.aspx");
+            System.Web.Security.FormsAuthentication.SignOut();
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "accesoDatosSQL1", "accesoDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webprueba", "webprueba\webprueba.csproj", "{533DE758-FCC8-4411-9057-B7DBDB35EE0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encriptacion", "Sha256\Encriptacion.csproj", "{39A7AE29-6805-4A61-9C9E-661C41FAE034}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{533DE758-FCC8-4411-9057-B7DBDB35EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A7AE29-6805-4A61-9C9E-661C41FAE034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A7AE29-6805-4A61-9C9E-661C41FAE034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A7AE29-6805-4A61-9C9E-661C41FAE034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A7AE29-6805-4A61-9C9E-661C41FAE034}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

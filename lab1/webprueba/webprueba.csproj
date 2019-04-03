@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\VerUsuarios.aspx" />
     <Content Include="Alumno\Alumno.aspx" />
     <Content Include="Alumno\InstanciarTarea.aspx" />
     <Content Include="Alumno\TareasAlumno.aspx" />
@@ -93,6 +94,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\VerUsuarios.aspx.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerUsuarios.aspx.designer.cs">
+      <DependentUpon>VerUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Alumno\Alumno.aspx.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +222,10 @@
     <ProjectReference Include="..\Correo\Correo.csproj">
       <Project>{f841c0ee-fec4-49ed-a954-f5f1fc5c4f12}</Project>
       <Name>Correo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sha256\Encriptacion.csproj">
+      <Project>{39a7ae29-6805-4a61-9c9e-661c41fae034}</Project>
+      <Name>Encriptacion</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

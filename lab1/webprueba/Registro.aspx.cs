@@ -1,13 +1,10 @@
 ﻿using accesoDatosSQL;
 using Correo;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Net.Mail;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using Sha256;
+
 
 namespace webprueba
 {
@@ -24,8 +21,9 @@ namespace webprueba
 
         }
 
-       protected void btnRegistrar_Click2(object sender, EventArgs e)
+        protected void btnRegistrar_Click2(object sender, EventArgs e)
         {
+
             bool enviado = false;
             Random rm = new Random();
             int numConfirm = rm.Next(1000000, 9999999);
@@ -82,13 +80,14 @@ namespace webprueba
                         comando.Parameters.AddWithValue("@numconfir", numConfirm);
                         comando.Parameters.AddWithValue("@confirmado", confirm);
                         comando.Parameters.AddWithValue("@tipo", RadioButtonList1.SelectedItem.Text);
-                        comando.Parameters.AddWithValue("@pass", this.txtPassword1.Text);
+                        comando.Parameters.AddWithValue("@pass", EncriptarMD5.MD5Hash(this.txtPassword1.Text));
                         comando.Parameters.AddWithValue("@codpass", codPass);
 
                         int numregs = comando.ExecuteNonQuery();
                         lblConfir.Text = numregs + " registro insertado correctamente." + "<br/>" + "" + "<br/>" + " Puede confirmarlo con el correo mandado a su email, o con el link:  <a href =\"http://hads18-fede.azurewebsites.net/Confirmar.aspx?correo=" + txtDirCorreo.Text + "&numconf=" + numConfirm + "\">Validar Correo</a>" + "<br/>" + "" + "<br/>" + "";
                         ac.cerrarConexion();
                         lblCorreoInexistente.Visible = false;
+
 
                     }
                     catch (Exception ex)

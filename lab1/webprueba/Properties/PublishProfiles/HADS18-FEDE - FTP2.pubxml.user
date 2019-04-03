@@ -10,6 +10,9 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <_PublishTargetUrl>ftp://waws-prod-db3-039.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Admin/VerUsuarios.aspx">
+      <publishTime>04/02/2019 16:51:31</publishTime>
+    </File>
     <File Include="Alumno/Alumno.aspx">
       <publishTime>03/25/2019 17:02:03</publishTime>
     </File>
@@ -18,6 +21,9 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     </File>
     <File Include="Alumno/TareasAlumno.aspx">
       <publishTime>03/25/2019 17:03:21</publishTime>
+    </File>
+    <File Include="Alumno/Web.config">
+      <publishTime>01/04/2019 14:34:07</publishTime>
     </File>
     <File Include="App_Data/HAS.xml">
       <publishTime>03/14/2018 15:57:28</publishTime>
@@ -81,6 +87,12 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>02/25/2019 11:23:07</publishTime>
+    </File>
+    <File Include="bin/Sha256.dll">
+      <publishTime>04/02/2019 16:52:37</publishTime>
+    </File>
+    <File Include="bin/Sha256.pdb">
+      <publishTime>04/02/2019 16:52:37</publishTime>
     </File>
     <File Include="bin/System.AppContext.dll">
       <publishTime>02/19/2019 19:41:19</publishTime>
@@ -365,10 +377,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/19/2019 19:41:19</publishTime>
     </File>
     <File Include="bin/webprueba.dll">
-      <publishTime>03/26/2019 16:08:43</publishTime>
+      <publishTime>04/02/2019 17:06:54</publishTime>
     </File>
     <File Include="bin/webprueba.pdb">
-      <publishTime>03/26/2019 16:08:43</publishTime>
+      <publishTime>04/02/2019 17:06:54</publishTime>
     </File>
     <File Include="CambiarPassword.aspx">
       <publishTime>02/25/2019 11:23:07</publishTime>
@@ -397,11 +409,14 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Profesor/TareasProfesor.aspx">
       <publishTime>03/26/2019 11:27:01</publishTime>
     </File>
+    <File Include="Profesor/Web.config">
+      <publishTime>04/01/2019 14:34:00</publishTime>
+    </File>
     <File Include="Registro.aspx">
       <publishTime>02/25/2019 11:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/26/2019 15:38:40</publishTime>
+      <publishTime>04/02/2019 17:06:56</publishTime>
     </File>
   </ItemGroup>
 </Project>
