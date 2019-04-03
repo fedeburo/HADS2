@@ -1,5 +1,6 @@
 ﻿using accesoDatosSQL;
 using Correo;
+using Sha256;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -101,7 +102,7 @@ namespace webprueba
             string pass2 = this.txtPassword2.Text;
             if (pass1.Equals(pass2))
             {
-                string update = "update Usuarios set pass='" + pass1 + "' where email='" + txtCorreo.Text + "'";
+                string update = "update Usuarios set pass='" + EncriptarMD5.MD5Hash(pass1) + "' where email='" + txtCorreo.Text + "'";
 
                 SqlCommand comandoUpdate = new SqlCommand(update, ac.conexion);
                 comandoUpdate.ExecuteNonQuery();
