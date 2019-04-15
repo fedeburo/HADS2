@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -81,11 +84,13 @@
     <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
     <Content Include="Logueado.aspx" />
     <Content Include="Profesor\ExportarTareas.aspx" />
     <Content Include="Profesor\ImportarTareasXMLDocument.aspx" />
     <Content Include="Profesor\InsertarTarea.aspx" />
+    <Content Include="Profesor\Profesor2.aspx" />
     <Content Include="Profesor\Profesor.aspx" />
     <Content Include="Profesor\TareasProfesor.aspx" />
     <Content Include="Registro.aspx" />
@@ -136,6 +141,9 @@
     <Compile Include="Confirmar.aspx.designer.cs">
       <DependentUpon>Confirmar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +178,13 @@
     </Compile>
     <Compile Include="Profesor\InsertarTarea.aspx.designer.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Profesor2.aspx.cs">
+      <DependentUpon>Profesor2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Profesor2.aspx.designer.cs">
+      <DependentUpon>Profesor2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor\Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>

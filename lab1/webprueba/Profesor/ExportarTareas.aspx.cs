@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
+using System.Collections;
 
 namespace webprueba.Profesor
 {
@@ -18,9 +19,16 @@ namespace webprueba.Profesor
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            Application["cantProfes"] = ((int)Application["cantProfes"]) - 1;
+            string correo = Session["correo"].ToString();
+            ArrayList listaProfes = (ArrayList)Application.Contents["listaProfes"];
+            listaProfes.Remove(correo);
+
+            Session.Clear();
             Session.Abandon();
-            Response.Redirect("~/Inicio.aspx");
             System.Web.Security.FormsAuthentication.SignOut();
+
+            Response.Redirect("~/Inicio.aspx");
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {

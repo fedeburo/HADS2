@@ -44,65 +44,80 @@
                 </asp:Panel>
             </asp:Panel>
             <br />
-             <asp:GridView ID="GridView1" runat="server"  style="margin-left: 213px" Width="230px" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2" Height="150px">
-                 <Columns>
-                     <asp:CommandField ShowEditButton="True" />
-                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
-                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                     <asp:BoundField DataField="CodAsig" HeaderText="CodAsig" SortExpression="CodAsig" />
-                     <asp:BoundField DataField="HEstimadas" HeaderText="HEstimadas" SortExpression="HEstimadas" />
-                     <asp:CheckBoxField DataField="Explotacion" HeaderText="Explotacion" SortExpression="Explotacion" />
-                     <asp:BoundField DataField="TipoTarea" HeaderText="TipoTarea" SortExpression="TipoTarea" />
-                 </Columns>
-            </asp:GridView>
-            <br />
-        
-            <br />
-                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AmigosConnectionString %>" SelectCommand="SELECT [Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea]) VALUES (@Codigo, @Descripcion, @CodAsig, @HEstimadas, @Explotacion, @TipoTarea)" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion] = @Descripcion, [CodAsig] = @CodAsig, [HEstimadas] = @HEstimadas, [Explotacion] = @Explotacion, [TipoTarea] = @TipoTarea WHERE [Codigo] = @Codigo">
-                     <DeleteParameters>
-                         <asp:Parameter Name="Codigo" Type="String" />
-                     </DeleteParameters>
-                     <InsertParameters>
-                         <asp:Parameter Name="Codigo" Type="String" />
-                         <asp:Parameter Name="Descripcion" Type="String" />
-                         <asp:Parameter Name="CodAsig" Type="String" />
-                         <asp:Parameter Name="HEstimadas" Type="Int32" />
-                         <asp:Parameter Name="Explotacion" Type="Boolean" />
-                         <asp:Parameter Name="TipoTarea" Type="String" />
-                     </InsertParameters>
-                     <SelectParameters>
-                         <asp:ControlParameter ControlID="DropDownList1" DefaultValue="" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
-                     </SelectParameters>
-                     <UpdateParameters>
-                         <asp:Parameter Name="Descripcion" Type="String" />
-                         <asp:Parameter Name="CodAsig" Type="String" />
-                         <asp:Parameter Name="HEstimadas" Type="Int32" />
-                         <asp:Parameter Name="Explotacion" Type="Boolean" />
-                         <asp:Parameter Name="TipoTarea" Type="String" />
-                         <asp:Parameter Name="Codigo" Type="String" />
-                     </UpdateParameters>
-                 </asp:SqlDataSource>
-            <br />
-            <br />
-        </div>
-            <asp:Panel ID="Panel2" runat="server" Height="192px" Width="234px" float="left">
+                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                     <ContentTemplate>
+                         <asp:Label ID="Label2" runat="server" Text="Seleccionar la asignatura"></asp:Label>
+                                         <br />
+                <br />
+                <asp:Button ID="btnInsertarTarea" runat="server" Text="Insertar tarea" OnClick="btnInsertarTarea_Click" />
+                         <br />
+                         <br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" OnDataBound="DropDownList1_DataBound" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="150px">
+                </asp:DropDownList>
+                         <br />
+                         <asp:UpdateProgress ID="UpdateProgress1" runat="server"  DisplayAfter="200" AssociatedUpdatePanelID="UpdatePanel1">
+                         <ProgressTemplate>
+                            <div class="progress">
+                                <img src="../ajax-loader.gif" />&nbsp;Espere por favor  
+                            </div>
+                            </ProgressTemplate>
+                         </asp:UpdateProgress>
+                         <asp:ScriptManager ID="ScriptManager1" runat="server">
+                         </asp:ScriptManager>
+                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2" Height="150px" style="margin-left: 201px" Width="230px">
+                             <Columns>
+                                 <asp:CommandField ShowEditButton="True" />
+                                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" />
+                                 <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                                 <asp:BoundField DataField="CodAsig" HeaderText="CodAsig" SortExpression="CodAsig" />
+                                 <asp:BoundField DataField="HEstimadas" HeaderText="HEstimadas" SortExpression="HEstimadas" />
+                                 <asp:CheckBoxField DataField="Explotacion" HeaderText="Explotacion" SortExpression="Explotacion" />
+                                 <asp:BoundField DataField="TipoTarea" HeaderText="TipoTarea" SortExpression="TipoTarea" />
+                             </Columns>
+                         </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AmigosConnectionString %>" SelectCommand="SELECT Asignaturas.codigo FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo INNER JOIN Asignaturas ON GruposClase.codigoasig = Asignaturas.codigo WHERE (ProfesoresGrupo.email = @email)">
                     <SelectParameters>
                         <asp:SessionParameter Name="email" SessionField="correo" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
+                         <br />
+                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AmigosConnectionString %>" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea]) VALUES (@Codigo, @Descripcion, @CodAsig, @HEstimadas, @Explotacion, @TipoTarea)" SelectCommand="SELECT [Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion] = @Descripcion, [CodAsig] = @CodAsig, [HEstimadas] = @HEstimadas, [Explotacion] = @Explotacion, [TipoTarea] = @TipoTarea WHERE [Codigo] = @Codigo">
+                             <DeleteParameters>
+                                 <asp:Parameter Name="Codigo" Type="String" />
+                             </DeleteParameters>
+                             <InsertParameters>
+                                 <asp:Parameter Name="Codigo" Type="String" />
+                                 <asp:Parameter Name="Descripcion" Type="String" />
+                                 <asp:Parameter Name="CodAsig" Type="String" />
+                                 <asp:Parameter Name="HEstimadas" Type="Int32" />
+                                 <asp:Parameter Name="Explotacion" Type="Boolean" />
+                                 <asp:Parameter Name="TipoTarea" Type="String" />
+                             </InsertParameters>
+                             <SelectParameters>
+                                 <asp:ControlParameter ControlID="DropDownList1" DefaultValue="" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
+                             </SelectParameters>
+                             <UpdateParameters>
+                                 <asp:Parameter Name="Descripcion" Type="String" />
+                                 <asp:Parameter Name="CodAsig" Type="String" />
+                                 <asp:Parameter Name="HEstimadas" Type="Int32" />
+                                 <asp:Parameter Name="Explotacion" Type="Boolean" />
+                                 <asp:Parameter Name="TipoTarea" Type="String" />
+                                 <asp:Parameter Name="Codigo" Type="String" />
+                             </UpdateParameters>
+                         </asp:SqlDataSource>
+                         
                 <br />
-                <asp:Label ID="Label2" runat="server" Text="Seleccionar la asignatura"></asp:Label>
                 <br />
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" Width="150px" AutoPostBack="true" OnDataBound="DropDownList1_DataBound">
-                    
-                </asp:DropDownList>
-                <br />
-                <br />
-                <asp:Button ID="btnInsertarTarea" runat="server" Text="Insertar tarea" OnClick="btnInsertarTarea_Click" />
-                <br />
-                <br />
-            </asp:Panel>
+                         <br />
+                         <br />
+                     </ContentTemplate>
+                 </asp:UpdatePanel>
+            <br />
+        
+            <br />
+            <br />
+            <br />
+        </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
     </form>

@@ -60,6 +60,30 @@
 
         </div>
         <br />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <br />
+                <br />
+                <br />
+                <asp:Label ID="lblCantAlumnos" runat="server" Text="Cantidad de alumnos conectados: "></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblNumAlumnos" runat="server"></asp:Label>
+                <br />
+                <asp:ListBox ID="listBoxAlumnos" runat="server" Width="198px" ></asp:ListBox>
+                <ajaxToolkit:RoundedCornersExtender ID="listBoxAlumnos_RoundedCornersExtender" runat="server" BehaviorID="listBoxAlumnos_RoundedCornersExtender" BorderColor="DarkRed" Color="DarkRed" Radius="8" TargetControlID="listBoxAlumnos" />
+                <br />
+                <br />
+                <asp:Label ID="lblCantProfes" runat="server" Text="Cantidad de profesores conectados: "></asp:Label>
+                &nbsp;<asp:Label ID="lblNumProfes" runat="server"></asp:Label>
+                <br />
+                <asp:ListBox ID="listBoxProfes" runat="server" Width="195px"></asp:ListBox>
+                <ajaxToolkit:RoundedCornersExtender ID="listBoxProfes_RoundedCornersExtender" runat="server" BehaviorID="listBoxProfes_RoundedCornersExtender" BorderColor="DarkRed" Color="DarkRed" Radius="8" TargetControlID="listBoxProfes" />
+                <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick">
+                </asp:Timer>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </ContentTemplate>
+        </asp:UpdatePanel>
         <br />
         <br />
         <br />

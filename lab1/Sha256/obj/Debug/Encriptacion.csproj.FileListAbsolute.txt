@@ -3,3 +3,4 @@ C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Sha256\bin\Debug\Sha256.pd
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Sha256\obj\Debug\Encriptacion.csproj.CoreCompileInputs.cache
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Sha256\obj\Debug\Sha256.dll
 C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Sha256\obj\Debug\Sha256.pdb
+C:\Users\fedeb\OneDrive\Desktop\UPV\3-2AÑO\HADS\lab1\Sha256\obj\Debug\Encriptacion.csprojAssemblyReference.cache

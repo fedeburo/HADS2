@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -83,9 +83,17 @@ namespace webprueba.Alumno
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            Application["cantAlumnos"] = ((int)Application["cantAlumnos"]) - 1;
+            string correo = Session["correo"].ToString();
+            ArrayList listaAlumnos = (ArrayList)Application.Contents["listaAlumnos"];
+            listaAlumnos.Remove(correo);
+
+            Session.Clear();
             Session.Abandon();
-            Response.Redirect("~/Inicio.aspx");
             System.Web.Security.FormsAuthentication.SignOut();
+
+
+            Response.Redirect("~/Inicio.aspx");
         }
     }
 }

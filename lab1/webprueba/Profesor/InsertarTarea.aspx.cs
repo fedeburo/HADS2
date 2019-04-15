@@ -1,5 +1,6 @@
 ﻿using accesoDatosSQL;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -53,8 +54,15 @@ namespace webprueba.Profesor
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            Application["cantProfes"] = ((int)Application["cantProfes"]) - 1;
+            string correo = Session["correo"].ToString();
+            ArrayList listaProfes = (ArrayList)Application.Contents["listaProfes"];
+            listaProfes.Remove(correo);
+
+            Session.Clear();
             Session.Abandon();
             System.Web.Security.FormsAuthentication.SignOut();
+
             Response.Redirect("~/Inicio.aspx");
         }
     }

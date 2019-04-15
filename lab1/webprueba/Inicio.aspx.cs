@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data.SqlClient;
 using System.Web.Security;
 using accesoDatosSQL;
@@ -21,23 +22,51 @@ namespace webprueba
             ac.conectar();
             if (CorreoyPassyConfirmExistente())
             {
-                
+                int cantidad = 0;
                 Session["correo"] = txtCorreo.Text;
                 Session["tipo"] = tipo;
                 if (tipo == "Profesor" && txtCorreo.Text == "vadillo@ehu.es")
                 {
+                    cantidad = (int)(Application.Contents["cantProfes"]);
+                    cantidad = cantidad + 1;
+                    Application.Contents["cantProfes"] = cantidad;
+                    ArrayList listaProfes = (ArrayList)Application.Contents["listaProfes"];
+                    listaProfes.Add(txtCorreo.Text);
+                    Application.Contents["listaProfes"] = listaProfes;
+
                     FormsAuthentication.SetAuthCookie("Vadillo", false);
                     this.Response.Redirect("/Profesor/Profesor.aspx");
+
+                    
+
+
                 }
                 if (tipo == "Profesor" && txtCorreo.Text != "vadillo@ehu.es")
                 {
+                    cantidad = (int)(Application.Contents["cantProfes"]);
+                    cantidad = cantidad +1;
+                    Application.Contents["cantProfes"] = cantidad;
+                    ArrayList listaProfes = (ArrayList)Application.Contents["listaProfes"];
+                    listaProfes.Add(txtCorreo.Text);
+                    Application.Contents["listaProfes"] = listaProfes;
+
                     FormsAuthentication.SetAuthCookie("Profesor", false);
                     this.Response.Redirect("/Profesor/Profesor.aspx");
+
                 }
                 if (tipo == "Alumno")
                 {
-                    FormsAuthentication.SetAuthCookie("Alumno", false);
+                    cantidad = (int)Application.Contents["cantAlumnos"];
+                    cantidad=cantidad+1;
+                    Application.Contents["cantAlumnos"] = cantidad;
+                    ArrayList listaAlumnos = (ArrayList)Application.Contents["listaAlumnos"];
+                    listaAlumnos.Add(txtCorreo.Text);
+                    Application.Contents["listaAlumnos"] = listaAlumnos;
+
+                    FormsAuthentication.SetAuthCookie("Alumno", false);        
                     this.Response.Redirect("/Alumno/Alumno.aspx");
+                    
+
                 }
                 if (tipo == "Admin")
                 {

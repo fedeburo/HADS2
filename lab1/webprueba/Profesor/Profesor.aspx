@@ -1,7 +1,13 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Alumno.aspx.cs" Inherits="webprueba.Alumno.Alumno" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="webprueba.Profesor.Profesor1" %>
 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
     <style type="text/css">
+
 
 .mybutton{
         border-style: none;
@@ -20,20 +26,10 @@
 }
 
     </style>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
 </head>
-<body>
+<body style="height: 539px">
     <form id="form1" runat="server">
-        <div style="margin-top: 22px; display: inline-block">
-            <asp:Panel ID="Panel2" runat="server" Height="292px">
-               <div style='display: inline-block; height: 50px;'>
-                <asp:Panel ID="Panel1" runat="server" Height="287px" style="margin-left: 0px" Width="157px"  >
+        <div>
                     <asp:Panel ID="Panel4" runat="server" Height="81px" Width="798px">
                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Black" Text="PROFESORES"></asp:Label>
@@ -46,34 +42,51 @@
                             <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="GESTION WEB DE TAREAS PARA  PROFESORES"></asp:Label>
                         </asp:Panel>
                     </div>
-                        <asp:HyperLink ID="HLAsig0" runat="server">Asignaturas</asp:HyperLink>
                         <br />
-                        <br />
-                        <asp:HyperLink ID="HLTareas" runat="server" NavigateUrl="~/Profesor/TareasProfesor.aspx">Tareas</asp:HyperLink>
-                        <br />
-                        <br />
-                        <asp:HyperLink ID="HLGrupos" runat="server">Grupos</asp:HyperLink>
-                        <br />
-                        <br />
-                        <asp:HyperLink ID="HLImportar" runat="server" NavigateUrl="~/Profesor/ImportarTareasXMLDocument.aspx">Importar XML</asp:HyperLink>
-                        <br />
-                        <br />
-                        <asp:HyperLink ID="HLExportar" runat="server" NavigateUrl="~/Profesor/ExportarTareas.aspx">Exportar</asp:HyperLink>
-                        <br />
-                        <br />
-                        <asp:HyperLink ID="HLImportarDS" runat="server">Importar DataSet</asp:HyperLink>
-                    <asp:HyperLink ID="gruposHL" runat="server">Grupos</asp:HyperLink>
-                    </asp:Panel>
-                    </div>
-
-            </asp:Panel>
-
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server">Asignaturas</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor/TareasProfesor.aspx">Tareas</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink3" runat="server">Grupos</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Profesor/ImportarTareasXMLDocument.aspx">Importar</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Profesor/ExportarTareas.aspx">Exportar</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink6" runat="server">Importar dataset</asp:HyperLink>
+                    <br />
+                    <br />
+                  
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <br />
+                <asp:Label ID="lblCantAlumnos" runat="server" Text="Cantidad de alumnos conectados: "></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblNumAlumnos" runat="server"></asp:Label>
+                <br />
+                <asp:ListBox ID="listBoxAlumnos" runat="server" Width="199px"></asp:ListBox>
+                <ajaxToolkit:RoundedCornersExtender ID="listBoxAlumnos_RoundedCornersExtender" runat="server" BehaviorID="listBoxAlumnos_RoundedCornersExtender" BorderColor="DarkRed" Color="DarkRed" TargetControlID="listBoxAlumnos" Radius="8" />
+                <br />
+                <br />
+                <asp:Label ID="lblCantProfes" runat="server" Text="Cantidad de profesores conectados: "></asp:Label>
+                &nbsp;<asp:Label ID="lblNumProfes" runat="server"></asp:Label>
+                <br />
+                <asp:ListBox ID="listBoxProfes" runat="server" Width="194px"></asp:ListBox>
+                <ajaxToolkit:RoundedCornersExtender ID="listBoxProfes_RoundedCornersExtender" runat="server" BehaviorID="listBoxProfes_RoundedCornersExtender" BorderColor="DarkRed" Color="DarkRed" Radius="8" TargetControlID="listBoxProfes" />
+                <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick">
+                </asp:Timer>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+            <br />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
     </form>
 </body>
 </html>
